@@ -1,0 +1,1859 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkTempleteAdditionalEditionStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkTempleteAdditionalEditionStack.template.json"
+      },
+      "metadata": {
+        "/CdkTempleteAdditionalEditionStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246",
+              "id": "68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246",
+              "packaging": "zip",
+              "sourceHash": "68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246",
+              "s3BucketParameter": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3BucketE8DBE8C4",
+              "s3KeyParameter": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2",
+              "artifactHashParameter": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246ArtifactHash0CC7FABC"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/construct-compat.ts:411:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:558:29)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b",
+              "id": "20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b",
+              "packaging": "zip",
+              "sourceHash": "20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b",
+              "s3BucketParameter": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3BucketD5770D8A",
+              "s3KeyParameter": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3VersionKey7334E3C3",
+              "artifactHashParameter": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bArtifactHash6D2CA43C"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/construct-compat.ts:411:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:133:19)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/s3-bucket-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3bucketid183E09C1",
+            "trace": [
+              "new Bucket (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1206:22)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/s3-bucket-id/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3bucketidPolicy12D84A10",
+            "trace": [
+              "new BucketPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:41:21)",
+              "Bucket.addToResourcePolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:454:21)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:49:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/my-oai/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myoaiEC2EFE36",
+            "trace": [
+              "new OriginAccessIdentity (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-cloudfront/lib/origin_access_identity.ts:111:21)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:36:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/WebsiteDistribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteDistributionCFDistribution70408E7F",
+            "trace": [
+              "new CloudFrontWebDistribution (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-cloudfront/lib/web_distribution.ts:920:26)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:56:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/project/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "projectRole1577EB66",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Project (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:31)",
+              "new PipelineProject (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:100:21)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/project/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "projectRoleDefaultPolicy3F10B507",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Role.addToPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:375:17)",
+              "PipelineProject.addToRolePolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:198:17)",
+              "new Project (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:778:10)",
+              "new PipelineProject (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:100:21)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/project/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "projectC7BA6BD1",
+            "trace": [
+              "new Project (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:745:22)",
+              "new PipelineProject (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:14:5)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:100:21)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/Repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Repository22E53BBD",
+            "trace": [
+              "new Repository (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:332:23)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:130:18)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/Repository/CdkTempleteAdditionalEditionStackpipeline3078CF22EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RepositoryCdkTempleteAdditionalEditionStackpipeline3078CF22EventRule257B5D88",
+            "trace": [
+              "new Rule (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events/lib/rule.ts:129:22)",
+              "Repository.onEvent (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:142:18)",
+              "Repository.onStateChange (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:156:23)",
+              "Repository.onReferenceUpdated (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:178:23)",
+              "Repository.onCommit (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:224:23)",
+              "CodeCommitSourceAction.bound (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.ts:126:29)",
+              "CodeCommitSourceAction.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:377:33)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineArtifactsBucketEncryptionKey16620CDF",
+            "trace": [
+              "new Key (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-kms/lib/key.ts:375:22)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:229:29)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineArtifactsBucket7D04D0D2",
+            "trace": [
+              "new Bucket (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1206:22)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:234:21)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineArtifactsBucketEncryptionKeyAlias2DB3E5DA",
+            "trace": [
+              "new Alias (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-kms/lib/alias.ts:197:22)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:242:7)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineRole55399C5D",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:251:31)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineRoleDefaultPolicy668B05DE",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "Bucket.grant (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:650:27)",
+              "Bucket.grantReadWrite (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:581:17)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:267:25)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineDBECAE49",
+            "trace": [
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:255:26)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Source/CodeCommit/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineSourceCodeCommitCodePipelineActionRole96563358",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "Pipeline.getRoleForAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:562:20)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:371:29)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineSourceCodeCommitCodePipelineActionRoleDefaultPolicy16377CBE",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "Bucket.grant (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:650:27)",
+              "Bucket.grantReadWrite (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:581:17)",
+              "CodeCommitSourceAction.bound (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.ts:134:20)",
+              "CodeCommitSourceAction.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:377:33)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineEventsRoleBE60D1BA",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "Object.singletonEventRole (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:17:16)",
+              "CodePipeline.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.ts:32:39)",
+              "Rule.addTarget (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events/lib/rule.ts:165:32)",
+              "Repository.onEvent (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:147:10)",
+              "Repository.onStateChange (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:156:23)",
+              "Repository.onReferenceUpdated (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:178:23)",
+              "Repository.onCommit (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:224:23)",
+              "CodeCommitSourceAction.bound (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.ts:126:29)",
+              "CodeCommitSourceAction.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:377:33)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineEventsRoleDefaultPolicyE77F6659",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Role.addToPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:375:17)",
+              "Array.forEach (<anonymous>)",
+              "Object.singletonEventRole (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events-targets/lib/util.ts:21:20)",
+              "CodePipeline.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.ts:32:39)",
+              "Rule.addTarget (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-events/lib/rule.ts:165:32)",
+              "Repository.onEvent (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:147:10)",
+              "Repository.onStateChange (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:156:23)",
+              "Repository.onReferenceUpdated (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:178:23)",
+              "Repository.onCommit (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codecommit/lib/repository.ts:224:23)",
+              "CodeCommitSourceAction.bound (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.ts:126:29)",
+              "CodeCommitSourceAction.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:377:33)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Build/CodeBuild/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineBuildCodeBuildCodePipelineActionRoleDA08C2F7",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "Pipeline.getRoleForAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:562:20)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:371:29)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/pipeline/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "pipelineBuildCodeBuildCodePipelineActionRoleDefaultPolicyBB22EDD3",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Role.addToPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:375:17)",
+              "CodeBuildAction.bound (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:131:18)",
+              "CodeBuildAction.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:59:17)",
+              "Pipeline._attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:377:33)",
+              "Stage.attachActionToPipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:302:19)",
+              "new Pipeline (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:286:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:155:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/SCHEDULE_MANAGER": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SCHEDULEMANAGER28DB279A"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/construct-compat.ts:411:92)",
+              "new Table (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:922:38)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:176:26)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/SCHEDULE_MANAGER/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SCHEDULEMANAGER28DB279A",
+            "trace": [
+              "new Table (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:895:18)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:176:26)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/scan-meeting/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scanmeetingServiceRole918E447F",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:538:31)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/scan-meeting/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scanmeetingServiceRoleDefaultPolicy0FBBB4C9",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:718:29)",
+              "Table.grantFullAccess (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:628:17)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:222:11)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/scan-meeting/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scanmeetingC69A8545",
+            "trace": [
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:592:35)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/scan-meeting/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scanmeetingLogRetention43FDACBA",
+            "trace": [
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:83:22)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3BucketE8DBE8C4",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:558:29)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:558:29)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246ArtifactHash0CC7FABC",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:558:29)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3BucketD5770D8A",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:133:19)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3VersionKey7334E3C3",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:133:19)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/AssetParameters/20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bArtifactHash6D2CA43C",
+            "trace": [
+              "new FileAssetParameters (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "CdkTempleteAdditionalEditionStack.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack.ts:624:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:133:19)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:138:32)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:143:10)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "trace": [
+              "new LogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:152:22)",
+              "LogRetention.ensureSingletonLogRetentionFunction (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:119:12)",
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:78:27)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:194:43)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/regist-meeting/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "registmeetingServiceRole46E82AA1",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:538:31)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:208:45)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/regist-meeting/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "registmeetingServiceRoleDefaultPolicy055FD2B9",
+            "trace": [
+              "new Policy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Function.addToPrincipal (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:718:29)",
+              "Table.grantFullAccess (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:628:17)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:223:11)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/regist-meeting/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "registmeeting13D06B28",
+            "trace": [
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:592:35)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:208:45)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/regist-meeting/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "registmeetingLogRetentionE7ED99B6",
+            "trace": [
+              "new LogRetention (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-logs/lib/log-retention.ts:83:22)",
+              "new Function (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function.ts:636:28)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:208:45)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/your-user-pool-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "youruserpoolid25D0736E",
+            "trace": [
+              "new UserPool (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-cognito/lib/user-pool.ts:718:22)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:228:40)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/your-user-pool-client-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "youruserpoolclientid88D662F6",
+            "trace": [
+              "new UserPoolClient (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-cognito/lib/user-pool-client.ts:310:22)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:278:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapi75F0BA3F",
+            "trace": [
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:588:22)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiCloudWatchRole18DD7A99",
+            "trace": [
+              "new Role (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "RestApi.configureCloudWatchRole (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:395:18)",
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:605:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiAccount196D3C35",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:400:22)",
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:605:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiDeployment9E33F60106f7996d051e9012243e7a3ddf916afb",
+            "trace": [
+              "new Deployment (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:70:21)",
+              "RestApi.configureDeployment (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:411:32)",
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiDeploymentStageprodD389FCD7",
+            "trace": [
+              "new Stage (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:239:22)",
+              "RestApi.configureDeployment (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:421:30)",
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiEndpoint78F985AD",
+            "trace": [
+              "RestApi.configureDeployment (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:426:7)",
+              "new RestApi (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:301:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiscanmeeting87DA1C23",
+            "trace": [
+              "new Resource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:401:22)",
+              "RootResource.addResource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:182:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:306:34)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/ApiPermission.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..scan-meeting": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiscanmeetingPOSTApiPermissionCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTscanmeeting8C4F9D9B",
+            "trace": [
+              "Function.addPermission (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:220:5)",
+              "LambdaIntegration.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:61:18)",
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:309:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/ApiPermission.Test.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..scan-meeting": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiscanmeetingPOSTApiPermissionTestCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTscanmeeting09E644DA",
+            "trace": [
+              "Function.addPermission (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:220:5)",
+              "LambdaIntegration.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:69:20)",
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:309:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiscanmeetingPOST8B5ACAF3",
+            "trace": [
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:309:17)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiscanmeetingOPTIONS7D4E2078",
+            "trace": [
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "addCorsOptions (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:324:15)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:310:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiregistmeeting383AA70F",
+            "trace": [
+              "new Resource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:401:22)",
+              "RootResource.addResource (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:182:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:312:36)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/ApiPermission.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..regist-meeting": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiregistmeetingPOSTApiPermissionCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTregistmeeting4229E9EC",
+            "trace": [
+              "Function.addPermission (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:220:5)",
+              "LambdaIntegration.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:61:18)",
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:315:19)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/ApiPermission.Test.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..regist-meeting": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiregistmeetingPOSTApiPermissionTestCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTregistmeeting3EFD4864",
+            "trace": [
+              "Function.addPermission (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:220:5)",
+              "LambdaIntegration.bind (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:69:20)",
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:315:19)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiregistmeetingPOST97E1A051",
+            "trace": [
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:315:19)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "schedulemanagerapiregistmeetingOPTIONS731D4F40",
+            "trace": [
+              "new Method (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "Resource.addMethod (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "addCorsOptions (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:324:15)",
+              "new CdkTempleteAdditionalEditionStack (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/lib/cdk-templete-additional-edition-stack.ts:316:5)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/bin/cdk-templete-additional-edition.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Module.m._compile (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/nagataryuuji/Desktop/self-improvement/aws-cdk/cdk-templete-additional-edition/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1156:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)",
+              "Module.load (internal/modules/cjs/loader.js:1000:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:899:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.63.0",
+      "@aws-cdk/cx-api": "1.63.0",
+      "@aws-cdk/cloud-assembly-schema": "1.63.0",
+      "@aws-cdk/aws-dynamodb": "1.63.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.63.0",
+      "@aws-cdk/aws-iam": "1.63.0",
+      "@aws-cdk/region-info": "1.63.0",
+      "@aws-cdk/aws-autoscaling-common": "1.63.0",
+      "@aws-cdk/aws-cloudwatch": "1.63.0",
+      "@aws-cdk/aws-kms": "1.63.0",
+      "@aws-cdk/aws-lambda": "1.63.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.63.0",
+      "@aws-cdk/aws-ec2": "1.63.0",
+      "@aws-cdk/aws-ssm": "1.63.0",
+      "@aws-cdk/aws-logs": "1.63.0",
+      "@aws-cdk/aws-s3-assets": "1.63.0",
+      "@aws-cdk/aws-s3": "1.63.0",
+      "@aws-cdk/aws-events": "1.63.0",
+      "@aws-cdk/assets": "1.63.0",
+      "@aws-cdk/aws-sqs": "1.63.0",
+      "@aws-cdk/custom-resources": "1.63.0",
+      "@aws-cdk/aws-apigateway": "1.63.0",
+      "@aws-cdk/aws-codecommit": "1.63.0",
+      "@aws-cdk/aws-codebuild": "1.63.0",
+      "@aws-cdk/aws-ecr-assets": "1.63.0",
+      "@aws-cdk/aws-ecr": "1.63.0",
+      "@aws-cdk/aws-codepipeline": "1.63.0",
+      "@aws-cdk/aws-codepipeline-actions": "1.63.0",
+      "@aws-cdk/aws-cloudformation": "1.63.0",
+      "@aws-cdk/aws-events-targets": "1.63.0",
+      "@aws-cdk/aws-ecs": "1.63.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.63.0",
+      "@aws-cdk/aws-servicediscovery": "1.63.0",
+      "@aws-cdk/aws-autoscaling": "1.63.0",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.63.0",
+      "@aws-cdk/aws-sns": "1.63.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.63.0",
+      "@aws-cdk/aws-cloudfront": "1.63.0",
+      "@aws-cdk/aws-certificatemanager": "1.63.0",
+      "@aws-cdk/aws-cognito": "1.63.0",
+      "jsii-runtime": "node.js/v12.16.2"
+    }
+  }
+}

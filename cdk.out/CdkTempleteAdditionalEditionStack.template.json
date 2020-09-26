@@ -1,0 +1,2464 @@
+{
+  "Resources": {
+    "s3bucketid183E09C1": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "your-web-dev-bucket",
+        "WebsiteConfiguration": {
+          "IndexDocument": "test.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/s3-bucket-id/Resource"
+      }
+    },
+    "s3bucketidPolicy12D84A10": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "s3bucketid183E09C1"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": {
+                "CanonicalUser": {
+                  "Fn::GetAtt": [
+                    "myoaiEC2EFE36",
+                    "S3CanonicalUserId"
+                  ]
+                }
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "s3bucketid183E09C1",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "CanonicalUser": {
+                  "Fn::GetAtt": [
+                    "myoaiEC2EFE36",
+                    "S3CanonicalUserId"
+                  ]
+                }
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "s3bucketid183E09C1",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "s3bucketid183E09C1",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/s3-bucket-id/Policy/Resource"
+      }
+    },
+    "myoaiEC2EFE36": {
+      "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+      "Properties": {
+        "CloudFrontOriginAccessIdentityConfig": {
+          "Comment": "Allows CloudFront to reach the bucket"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/my-oai/Resource"
+      }
+    },
+    "WebsiteDistributionCFDistribution70408E7F": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [],
+          "CustomErrorResponses": [
+            {
+              "ErrorCachingMinTTL": 0,
+              "ErrorCode": 403,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            },
+            {
+              "ErrorCachingMinTTL": 0,
+              "ErrorCode": 404,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "Compress": true,
+            "DefaultTTL": 86400,
+            "ForwardedValues": {
+              "Cookies": {
+                "Forward": "none"
+              },
+              "QueryString": false
+            },
+            "MaxTTL": 31536000,
+            "MinTTL": 0,
+            "TargetOriginId": "origin1",
+            "ViewerProtocolPolicy": "redirect-to-https"
+          },
+          "DefaultRootObject": "index.html",
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "ConnectionAttempts": 3,
+              "ConnectionTimeout": 10,
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "s3bucketid183E09C1",
+                  "RegionalDomainName"
+                ]
+              },
+              "Id": "origin1",
+              "S3OriginConfig": {
+                "OriginAccessIdentity": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "origin-access-identity/cloudfront/",
+                      {
+                        "Ref": "myoaiEC2EFE36"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "PriceClass": "PriceClass_All",
+          "ViewerCertificate": {
+            "CloudFrontDefaultCertificate": true
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/WebsiteDistribution/CFDistribution"
+      }
+    },
+    "projectRole1577EB66": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codebuild.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/project/Role/Resource"
+      }
+    },
+    "projectRoleDefaultPolicy3F10B507": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "projectC7BA6BD1"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "projectC7BA6BD1"
+                      },
+                      ":*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "codebuild:CreateReportGroup",
+                "codebuild:CreateReport",
+                "codebuild:UpdateReport",
+                "codebuild:BatchPutTestCases"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codebuild:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":report-group/",
+                    {
+                      "Ref": "projectC7BA6BD1"
+                    },
+                    "-*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "s3:*",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "s3bucketid183E09C1",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "s3bucketid183E09C1",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "pipelineArtifactsBucket7D04D0D2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "pipelineArtifactsBucket7D04D0D2",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineArtifactsBucketEncryptionKey16620CDF",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineArtifactsBucketEncryptionKey16620CDF",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "projectRoleDefaultPolicy3F10B507",
+        "Roles": [
+          {
+            "Ref": "projectRole1577EB66"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/project/Role/DefaultPolicy/Resource"
+      }
+    },
+    "projectC7BA6BD1": {
+      "Type": "AWS::CodeBuild::Project",
+      "Properties": {
+        "Artifacts": {
+          "Type": "CODEPIPELINE"
+        },
+        "Environment": {
+          "ComputeType": "BUILD_GENERAL1_SMALL",
+          "EnvironmentVariables": [
+            {
+              "Name": "S3_BUCKET_ARN",
+              "Type": "PLAINTEXT",
+              "Value": {
+                "Fn::GetAtt": [
+                  "s3bucketid183E09C1",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Image": "aws/codebuild/standard:1.0",
+          "PrivilegedMode": false,
+          "Type": "LINUX_CONTAINER"
+        },
+        "ServiceRole": {
+          "Fn::GetAtt": [
+            "projectRole1577EB66",
+            "Arn"
+          ]
+        },
+        "Source": {
+          "Type": "CODEPIPELINE"
+        },
+        "Description": "some description",
+        "EncryptionKey": {
+          "Fn::GetAtt": [
+            "pipelineArtifactsBucketEncryptionKey16620CDF",
+            "Arn"
+          ]
+        },
+        "Name": "yourProject-dev"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/project/Resource"
+      }
+    },
+    "Repository22E53BBD": {
+      "Type": "AWS::CodeCommit::Repository",
+      "Properties": {
+        "RepositoryName": "your-cdk-repository",
+        "RepositoryDescription": "Some description."
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/Repository/Resource"
+      }
+    },
+    "RepositoryCdkTempleteAdditionalEditionStackpipeline3078CF22EventRule257B5D88": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codecommit"
+          ],
+          "resources": [
+            {
+              "Fn::GetAtt": [
+                "Repository22E53BBD",
+                "Arn"
+              ]
+            }
+          ],
+          "detail-type": [
+            "CodeCommit Repository State Change"
+          ],
+          "detail": {
+            "event": [
+              "referenceCreated",
+              "referenceUpdated"
+            ],
+            "referenceName": [
+              "master"
+            ]
+          }
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:",
+                  {
+                    "Ref": "AWS::Partition"
+                  },
+                  ":codepipeline:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":",
+                  {
+                    "Ref": "pipelineDBECAE49"
+                  }
+                ]
+              ]
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "pipelineEventsRoleBE60D1BA",
+                "Arn"
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/Repository/CdkTempleteAdditionalEditionStackpipeline3078CF22EventRule/Resource"
+      }
+    },
+    "pipelineArtifactsBucketEncryptionKey16620CDF": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion",
+                "kms:GenerateDataKey",
+                "kms:TagResource",
+                "kms:UntagResource"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "pipelineRole55399C5D",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "pipelineSourceCodeCommitCodePipelineActionRole96563358",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "projectRole1577EB66",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "projectRole1577EB66",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucketEncryptionKey/Resource"
+      }
+    },
+    "pipelineArtifactsBucket7D04D0D2": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "KMSMasterKeyID": {
+                  "Fn::GetAtt": [
+                    "pipelineArtifactsBucketEncryptionKey16620CDF",
+                    "Arn"
+                  ]
+                },
+                "SSEAlgorithm": "aws:kms"
+              }
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucket/Resource"
+      }
+    },
+    "pipelineArtifactsBucketEncryptionKeyAlias2DB3E5DA": {
+      "Type": "AWS::KMS::Alias",
+      "Properties": {
+        "AliasName": "alias/codepipeline-cdktempleteadditionaleditionstackpipeline3078cf22",
+        "TargetKeyId": {
+          "Fn::GetAtt": [
+            "pipelineArtifactsBucketEncryptionKey16620CDF",
+            "Arn"
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/ArtifactsBucketEncryptionKeyAlias/Resource"
+      }
+    },
+    "pipelineRole55399C5D": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codepipeline.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Role/Resource"
+      }
+    },
+    "pipelineRoleDefaultPolicy668B05DE": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "pipelineArtifactsBucket7D04D0D2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "pipelineArtifactsBucket7D04D0D2",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineArtifactsBucketEncryptionKey16620CDF",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineSourceCodeCommitCodePipelineActionRole96563358",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineBuildCodeBuildCodePipelineActionRoleDA08C2F7",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "pipelineRoleDefaultPolicy668B05DE",
+        "Roles": [
+          {
+            "Ref": "pipelineRole55399C5D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Role/DefaultPolicy/Resource"
+      }
+    },
+    "pipelineDBECAE49": {
+      "Type": "AWS::CodePipeline::Pipeline",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "pipelineRole55399C5D",
+            "Arn"
+          ]
+        },
+        "Stages": [
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Source",
+                  "Owner": "AWS",
+                  "Provider": "CodeCommit",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "RepositoryName": {
+                    "Fn::GetAtt": [
+                      "Repository22E53BBD",
+                      "Name"
+                    ]
+                  },
+                  "BranchName": "master",
+                  "PollForSourceChanges": false
+                },
+                "Name": "CodeCommit",
+                "OutputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_CodeCommit"
+                  }
+                ],
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "pipelineSourceCodeCommitCodePipelineActionRole96563358",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "Source"
+          },
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Build",
+                  "Owner": "AWS",
+                  "Provider": "CodeBuild",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "ProjectName": {
+                    "Ref": "projectC7BA6BD1"
+                  }
+                },
+                "InputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_CodeCommit"
+                  }
+                ],
+                "Name": "CodeBuild",
+                "OutputArtifacts": [
+                  {
+                    "Name": "Artifact_Build_CodeBuild"
+                  }
+                ],
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "pipelineBuildCodeBuildCodePipelineActionRoleDA08C2F7",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "Build"
+          }
+        ],
+        "ArtifactStore": {
+          "EncryptionKey": {
+            "Id": {
+              "Fn::GetAtt": [
+                "pipelineArtifactsBucketEncryptionKey16620CDF",
+                "Arn"
+              ]
+            },
+            "Type": "KMS"
+          },
+          "Location": {
+            "Ref": "pipelineArtifactsBucket7D04D0D2"
+          },
+          "Type": "S3"
+        },
+        "Name": "myPipeline-dev"
+      },
+      "DependsOn": [
+        "pipelineRoleDefaultPolicy668B05DE",
+        "pipelineRole55399C5D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Resource"
+      }
+    },
+    "pipelineSourceCodeCommitCodePipelineActionRole96563358": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Source/CodeCommit/CodePipelineActionRole/Resource"
+      }
+    },
+    "pipelineSourceCodeCommitCodePipelineActionRoleDefaultPolicy16377CBE": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "pipelineArtifactsBucket7D04D0D2",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "pipelineArtifactsBucket7D04D0D2",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "pipelineArtifactsBucketEncryptionKey16620CDF",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:UploadArchive",
+                "codecommit:GetUploadArchiveStatus",
+                "codecommit:CancelUploadArchive"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "Repository22E53BBD",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "pipelineSourceCodeCommitCodePipelineActionRoleDefaultPolicy16377CBE",
+        "Roles": [
+          {
+            "Ref": "pipelineSourceCodeCommitCodePipelineActionRole96563358"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "pipelineEventsRoleBE60D1BA": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/EventsRole/Resource"
+      }
+    },
+    "pipelineEventsRoleDefaultPolicyE77F6659": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "codepipeline:StartPipelineExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codepipeline:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "pipelineDBECAE49"
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "pipelineEventsRoleDefaultPolicyE77F6659",
+        "Roles": [
+          {
+            "Ref": "pipelineEventsRoleBE60D1BA"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/EventsRole/DefaultPolicy/Resource"
+      }
+    },
+    "pipelineBuildCodeBuildCodePipelineActionRoleDA08C2F7": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Build/CodeBuild/CodePipelineActionRole/Resource"
+      }
+    },
+    "pipelineBuildCodeBuildCodePipelineActionRoleDefaultPolicyBB22EDD3": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "codebuild:BatchGetBuilds",
+                "codebuild:StartBuild",
+                "codebuild:StopBuild"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "projectC7BA6BD1",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "pipelineBuildCodeBuildCodePipelineActionRoleDefaultPolicyBB22EDD3",
+        "Roles": [
+          {
+            "Ref": "pipelineBuildCodeBuildCodePipelineActionRoleDA08C2F7"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/pipeline/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "SCHEDULEMANAGER28DB279A": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "meeting_id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "password",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "meeting_id",
+            "AttributeType": "N"
+          },
+          {
+            "AttributeName": "password",
+            "AttributeType": "S"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "SCHEDULE_MANAGER"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/SCHEDULE_MANAGER/Resource"
+      }
+    },
+    "scanmeetingServiceRole918E447F": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/scan-meeting/ServiceRole/Resource"
+      }
+    },
+    "scanmeetingServiceRoleDefaultPolicy0FBBB4C9": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "dynamodb:*",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SCHEDULEMANAGER28DB279A",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "scanmeetingServiceRoleDefaultPolicy0FBBB4C9",
+        "Roles": [
+          {
+            "Ref": "scanmeetingServiceRole918E447F"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/scan-meeting/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "scanmeetingC69A8545": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3BucketE8DBE8C4"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "scan-meeting.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "scanmeetingServiceRole918E447F",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Environment": {
+          "Variables": {
+            "TZ": "Asia/Tokyo",
+            "TABLE_NAME": {
+              "Ref": "SCHEDULEMANAGER28DB279A"
+            },
+            "CORS_URL": "https://d36dbqt35vqs6q.cloudfront.net/"
+          }
+        },
+        "FunctionName": "scan-meeting",
+        "Timeout": 10
+      },
+      "DependsOn": [
+        "scanmeetingServiceRoleDefaultPolicy0FBBB4C9",
+        "scanmeetingServiceRole918E447F"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/scan-meeting/Resource",
+        "aws:asset:path": "asset.68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246",
+        "aws:asset:property": "Code"
+      }
+    },
+    "scanmeetingLogRetention43FDACBA": {
+      "Type": "Custom::LogRetention",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn"
+          ]
+        },
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "scanmeetingC69A8545"
+              }
+            ]
+          ]
+        },
+        "RetentionInDays": 60
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/scan-meeting/LogRetention/Resource"
+      }
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource"
+      }
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:PutRetentionPolicy",
+                "logs:DeleteRetentionPolicy"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "Roles": [
+          {
+            "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Runtime": "nodejs10.x",
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3BucketD5770D8A"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3VersionKey7334E3C3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3VersionKey7334E3C3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource"
+      }
+    },
+    "registmeetingServiceRole46E82AA1": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/regist-meeting/ServiceRole/Resource"
+      }
+    },
+    "registmeetingServiceRoleDefaultPolicy055FD2B9": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "dynamodb:*",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SCHEDULEMANAGER28DB279A",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "registmeetingServiceRoleDefaultPolicy055FD2B9",
+        "Roles": [
+          {
+            "Ref": "registmeetingServiceRole46E82AA1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/regist-meeting/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "registmeeting13D06B28": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3BucketE8DBE8C4"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "regist-meeting.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "registmeetingServiceRole46E82AA1",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Environment": {
+          "Variables": {
+            "TZ": "Asia/Tokyo",
+            "TABLE_NAME": {
+              "Ref": "SCHEDULEMANAGER28DB279A"
+            },
+            "CORS_URL": "https://d36dbqt35vqs6q.cloudfront.net/"
+          }
+        },
+        "FunctionName": "regist-meetings",
+        "Timeout": 10
+      },
+      "DependsOn": [
+        "registmeetingServiceRoleDefaultPolicy055FD2B9",
+        "registmeetingServiceRole46E82AA1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/regist-meeting/Resource",
+        "aws:asset:path": "asset.68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246",
+        "aws:asset:property": "Code"
+      }
+    },
+    "registmeetingLogRetentionE7ED99B6": {
+      "Type": "Custom::LogRetention",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn"
+          ]
+        },
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "registmeeting13D06B28"
+              }
+            ]
+          ]
+        },
+        "RetentionInDays": 60
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/regist-meeting/LogRetention/Resource"
+      }
+    },
+    "youruserpoolid25D0736E": {
+      "Type": "AWS::Cognito::UserPool",
+      "Properties": {
+        "AccountRecoverySetting": {
+          "RecoveryMechanisms": [
+            {
+              "Name": "verified_email",
+              "Priority": 1
+            }
+          ]
+        },
+        "AdminCreateUserConfig": {
+          "AllowAdminCreateUserOnly": false
+        },
+        "AliasAttributes": [
+          "email"
+        ],
+        "AutoVerifiedAttributes": [
+          "email"
+        ],
+        "EmailVerificationMessage": "Your verification code is {####}",
+        "EmailVerificationSubject": "Your verification code",
+        "Policies": {
+          "PasswordPolicy": {
+            "MinimumLength": 8,
+            "RequireLowercase": true,
+            "RequireNumbers": true,
+            "RequireSymbols": false,
+            "RequireUppercase": true,
+            "TemporaryPasswordValidityDays": 7
+          }
+        },
+        "Schema": [
+          {
+            "Mutable": true,
+            "Name": "email",
+            "Required": true
+          },
+          {
+            "Mutable": true,
+            "Name": "name",
+            "Required": true
+          }
+        ],
+        "SmsVerificationMessage": "The verification code to your new account is {####}",
+        "UsernameConfiguration": {
+          "CaseSensitive": true
+        },
+        "UserPoolName": "yourUserPoolName",
+        "VerificationMessageTemplate": {
+          "DefaultEmailOption": "CONFIRM_WITH_CODE",
+          "EmailMessage": "Your verification code is {####}",
+          "EmailSubject": "Your verification code",
+          "SmsMessage": "The verification code to your new account is {####}"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/your-user-pool-id/Resource"
+      }
+    },
+    "youruserpoolclientid88D662F6": {
+      "Type": "AWS::Cognito::UserPoolClient",
+      "Properties": {
+        "UserPoolId": {
+          "Ref": "youruserpoolid25D0736E"
+        },
+        "AllowedOAuthFlows": [
+          "code"
+        ],
+        "AllowedOAuthFlowsUserPoolClient": true,
+        "AllowedOAuthScopes": [
+          "email",
+          "openid"
+        ],
+        "CallbackURLs": [
+          "https://example.com"
+        ],
+        "ClientName": "yourAppClientName",
+        "ExplicitAuthFlows": [
+          "ALLOW_USER_PASSWORD_AUTH"
+        ],
+        "GenerateSecret": true,
+        "PreventUserExistenceErrors": "ENABLED",
+        "SupportedIdentityProviders": [
+          "COGNITO"
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/your-user-pool-client-id/Resource"
+      }
+    },
+    "schedulemanagerapi75F0BA3F": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "schedule-manager-api"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Resource"
+      }
+    },
+    "schedulemanagerapiCloudWatchRole18DD7A99": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/CloudWatchRole/Resource"
+      }
+    },
+    "schedulemanagerapiAccount196D3C35": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "schedulemanagerapiCloudWatchRole18DD7A99",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "schedulemanagerapi75F0BA3F"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Account"
+      }
+    },
+    "schedulemanagerapiDeployment9E33F60106f7996d051e9012243e7a3ddf916afb": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "schedulemanagerapiregistmeetingOPTIONS731D4F40",
+        "schedulemanagerapiregistmeetingPOST97E1A051",
+        "schedulemanagerapiregistmeeting383AA70F",
+        "schedulemanagerapiscanmeetingOPTIONS7D4E2078",
+        "schedulemanagerapiscanmeetingPOST8B5ACAF3",
+        "schedulemanagerapiscanmeeting87DA1C23"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Deployment/Resource"
+      }
+    },
+    "schedulemanagerapiDeploymentStageprodD389FCD7": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "DeploymentId": {
+          "Ref": "schedulemanagerapiDeployment9E33F60106f7996d051e9012243e7a3ddf916afb"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/DeploymentStage.prod/Resource"
+      }
+    },
+    "schedulemanagerapiscanmeeting87DA1C23": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "schedulemanagerapi75F0BA3F",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "scan-meeting",
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/Resource"
+      }
+    },
+    "schedulemanagerapiscanmeetingPOSTApiPermissionCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTscanmeeting8C4F9D9B": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "scanmeetingC69A8545",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "schedulemanagerapi75F0BA3F"
+              },
+              "/",
+              {
+                "Ref": "schedulemanagerapiDeploymentStageprodD389FCD7"
+              },
+              "/POST/scan-meeting"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/ApiPermission.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..scan-meeting"
+      }
+    },
+    "schedulemanagerapiscanmeetingPOSTApiPermissionTestCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTscanmeeting09E644DA": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "scanmeetingC69A8545",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "schedulemanagerapi75F0BA3F"
+              },
+              "/test-invoke-stage/POST/scan-meeting"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/ApiPermission.Test.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..scan-meeting"
+      }
+    },
+    "schedulemanagerapiscanmeetingPOST8B5ACAF3": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "schedulemanagerapiscanmeeting87DA1C23"
+        },
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "scanmeetingC69A8545",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/POST/Resource"
+      }
+    },
+    "schedulemanagerapiscanmeetingOPTIONS7D4E2078": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "OPTIONS",
+        "ResourceId": {
+          "Ref": "schedulemanagerapiscanmeeting87DA1C23"
+        },
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Credentials": "'false'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET,PUT,POST,DELETE'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "NEVER",
+          "RequestTemplates": {
+            "application/json": "{\"statusCode\": 200}"
+          },
+          "Type": "MOCK"
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Credentials": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/scan-meeting/OPTIONS/Resource"
+      }
+    },
+    "schedulemanagerapiregistmeeting383AA70F": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "schedulemanagerapi75F0BA3F",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "regist-meeting",
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/Resource"
+      }
+    },
+    "schedulemanagerapiregistmeetingPOSTApiPermissionCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTregistmeeting4229E9EC": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "registmeeting13D06B28",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "schedulemanagerapi75F0BA3F"
+              },
+              "/",
+              {
+                "Ref": "schedulemanagerapiDeploymentStageprodD389FCD7"
+              },
+              "/POST/regist-meeting"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/ApiPermission.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..regist-meeting"
+      }
+    },
+    "schedulemanagerapiregistmeetingPOSTApiPermissionTestCdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9POSTregistmeeting3EFD4864": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "registmeeting13D06B28",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "schedulemanagerapi75F0BA3F"
+              },
+              "/test-invoke-stage/POST/regist-meeting"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/ApiPermission.Test.CdkTempleteAdditionalEditionStackschedulemanagerapiEA4819F9.POST..regist-meeting"
+      }
+    },
+    "schedulemanagerapiregistmeetingPOST97E1A051": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "schedulemanagerapiregistmeeting383AA70F"
+        },
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "registmeeting13D06B28",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/POST/Resource"
+      }
+    },
+    "schedulemanagerapiregistmeetingOPTIONS731D4F40": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "OPTIONS",
+        "ResourceId": {
+          "Ref": "schedulemanagerapiregistmeeting383AA70F"
+        },
+        "RestApiId": {
+          "Ref": "schedulemanagerapi75F0BA3F"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Credentials": "'false'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET,PUT,POST,DELETE'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "NEVER",
+          "RequestTemplates": {
+            "application/json": "{\"statusCode\": 200}"
+          },
+          "Type": "MOCK"
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Credentials": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkTempleteAdditionalEditionStack/schedule-manager-api/Default/regist-meeting/OPTIONS/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.63.0,@aws-cdk/assets=1.63.0,@aws-cdk/aws-apigateway=1.63.0,@aws-cdk/aws-applicationautoscaling=1.63.0,@aws-cdk/aws-autoscaling=1.63.0,@aws-cdk/aws-autoscaling-common=1.63.0,@aws-cdk/aws-autoscaling-hooktargets=1.63.0,@aws-cdk/aws-certificatemanager=1.63.0,@aws-cdk/aws-cloudformation=1.63.0,@aws-cdk/aws-cloudfront=1.63.0,@aws-cdk/aws-cloudwatch=1.63.0,@aws-cdk/aws-codebuild=1.63.0,@aws-cdk/aws-codecommit=1.63.0,@aws-cdk/aws-codeguruprofiler=1.63.0,@aws-cdk/aws-codepipeline=1.63.0,@aws-cdk/aws-codepipeline-actions=1.63.0,@aws-cdk/aws-cognito=1.63.0,@aws-cdk/aws-dynamodb=1.63.0,@aws-cdk/aws-ec2=1.63.0,@aws-cdk/aws-ecr=1.63.0,@aws-cdk/aws-ecr-assets=1.63.0,@aws-cdk/aws-ecs=1.63.0,@aws-cdk/aws-elasticloadbalancingv2=1.63.0,@aws-cdk/aws-events=1.63.0,@aws-cdk/aws-events-targets=1.63.0,@aws-cdk/aws-iam=1.63.0,@aws-cdk/aws-kms=1.63.0,@aws-cdk/aws-lambda=1.63.0,@aws-cdk/aws-logs=1.63.0,@aws-cdk/aws-s3=1.63.0,@aws-cdk/aws-s3-assets=1.63.0,@aws-cdk/aws-servicediscovery=1.63.0,@aws-cdk/aws-sns=1.63.0,@aws-cdk/aws-sns-subscriptions=1.63.0,@aws-cdk/aws-sqs=1.63.0,@aws-cdk/aws-ssm=1.63.0,@aws-cdk/cloud-assembly-schema=1.63.0,@aws-cdk/core=1.63.0,@aws-cdk/custom-resources=1.63.0,@aws-cdk/cx-api=1.63.0,@aws-cdk/region-info=1.63.0,jsii-runtime=node.js/v12.16.2"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3BucketE8DBE8C4": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246\""
+    },
+    "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246S3VersionKey53DCBBF2": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246\""
+    },
+    "AssetParameters68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246ArtifactHash0CC7FABC": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"68f038da758979b5c49766200e62625b3f762d6627a84bb2bc5ad26e6e140246\""
+    },
+    "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3BucketD5770D8A": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b\""
+    },
+    "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bS3VersionKey7334E3C3": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b\""
+    },
+    "AssetParameters20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584bArtifactHash6D2CA43C": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"20e06317b2e4aa8c9a1052d2e0f40d4c738bc91399a9ea24aa2b1e013bfe584b\""
+    }
+  },
+  "Outputs": {
+    "schedulemanagerapiEndpoint78F985AD": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "schedulemanagerapi75F0BA3F"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "schedulemanagerapiDeploymentStageprodD389FCD7"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
