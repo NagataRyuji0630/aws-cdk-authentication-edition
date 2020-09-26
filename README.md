@@ -14,15 +14,15 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
  * `cdk synth`       emits the synthesized CloudFormation template
 
 ## How is this templete image
-cdk-templete-startup-edition直下の`./cdk-startup-edition.drawio`を参照ください。
+aws-cdk-authentication-edition直下の`./cdk-additional-edition.drawio`を参照ください。
 
 ## What's you need to edit
 
- * `cdk-templete-startup-edition-stack.ts` ：AWSのアーキテクチャーを定義するファイルです。
-                                            ユーザーがアーキテクチャー定義のために編集するべきファイルはこのファイルのみとなります。
+ * `cdk-templete-startup-edition-stack.ts` ：AWSのリソースを定義するファイルです。
+                                            ユーザーがリソース定義のために編集するべきファイルはこのファイルのみとなります。
  * `src/lambda/*.js` ：スタックファイルで定義したLambda関数の定義先です。lambdaディレクトリ直下に関数を定義します。
 
-## How to deploy your architecture
+## How to deploy your backend resource
  * `To start AWS-CDK: npm install -g aws-cdk` ：初めてAWS CDKを利用する際はCDKのインストールから実行してください
  * `To confirm install: cdk --version`
  * `STEP1. cd ./cdk-templete-startup-edition`
