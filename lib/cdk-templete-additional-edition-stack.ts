@@ -13,12 +13,18 @@ import * as cloudfront from '@aws-cdk/aws-cloudfront';
 import * as cognito from '@aws-cdk/aws-cognito';
 
 //**************************************************** */
-// buildspec.yamの中から、functionNameに対してdeployされる想定
+// 変数部分は自由に編集してください。
 const stage = "dev"; // "stg","prd"
 const bucketName = 'your-web-dev-bucket'
+const projectName = 'myProject-' + stage; // ステージごとにリポジトリを作り分け可能
+const repositoryName = 'my-cdk-repository' + stage;
+const branch = 'master'; // 'release','master'; 
+const pipelineName = 'myPipeline-' + stage;
+const tableName = "MY_TABLE";
+const restApiName = 'my-first-api';
 //**************************************************** */
 
-export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
+export class CdkTrainingStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -98,7 +104,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
     // ビルドプロジェクトの作成
     //**************************************************** */
     const project = new codebuild.PipelineProject(this, 'project', {
-      projectName: 'yourProject-' + stage,  // ビルドプロジェクトを定義
+      projectName: projectName,  // ビルドプロジェクトを定義
       description: 'some description',
       environment: {
         // 環境変数をbuildspec.ymlに設定
@@ -123,8 +129,6 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
     //**************************************************** */
     // ソースアクションの作成
     //**************************************************** */
-    const repositoryName = 'your-cdk-repository';
-    const branch = 'master'; // 'release','master';
 
     // CodeCommitリポジトリの作成
     const repo = new codecommit.Repository(this, 'Repository', {
@@ -153,7 +157,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
     // パイプラインの作成
     //**************************************************** */
     new codepipeline.Pipeline(this, 'pipeline', {
-      pipelineName: 'myPipeline-' + stage,
+      pipelineName: pipelineName,
       stages: [
         {
           stageName: 'Source',
@@ -173,7 +177,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
     //**************************************************** */
     // DyanmoDBの作成
     //**************************************************** */
-    const table: Table = new Table(this, "SCHEDULE_MANAGER", {
+    const table: Table = new Table(this, "my-table-id", {
       partitionKey: {
         name: "meeting_id",
         type: AttributeType.NUMBER
@@ -184,7 +188,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
       },
       readCapacity: 1,
       writeCapacity: 1,
-      tableName: 'SCHEDULE_MANAGER',
+      tableName: tableName,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
@@ -200,7 +204,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
       environment: {
         TZ: "Asia/Tokyo",
         TABLE_NAME: table.tableName,
-        CORS_URL: "https://d36dbqt35vqs6q.cloudfront.net/"
+        CORS_URL: "*" //作成したCloudFrontのエンドポイントを指定する
       },
       logRetention: RetentionDays.TWO_MONTHS,
     });
@@ -214,7 +218,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
       environment: {
         TZ: "Asia/Tokyo",
         TABLE_NAME: table.tableName,
-        CORS_URL: "https://d36dbqt35vqs6q.cloudfront.net/"
+        CORS_URL: "*" //作成したCloudFrontのエンドポイントを指定する
       },
       logRetention: RetentionDays.TWO_MONTHS,
     });
@@ -280,7 +284,9 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
       userPool: userPool,
       // ユーザーによる認証を許可する
       authFlows: {
-        userPassword: true
+        refreshToken: true,
+        userPassword: true,
+        userSrp: true
       },
       // クライアントシークレットを生成する
       generateSecret: true,
@@ -299,7 +305,7 @@ export class CdkTempleteAdditionalEditionStack extends cdk.Stack {
     // API Gateway（リソース, メソッド）の作成
     //**************************************************** */
     const api = new RestApi(this, "schedule-manager-api", {
-      restApiName: "schedule-manager-api",
+      restApiName: restApiName,
       cloudWatchRole: true,
 
     });
